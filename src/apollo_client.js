@@ -3,7 +3,8 @@ import { setContext } from '@apollo/client/link/context';
 
 const httpLink = new HttpLink({
   // uri: 'http://localhost:8000/graphql',
-  uri: 'http://voyager-backend-fg29iqx7y-ud11.vercel.app',
+  // uri: 'http://voyager-backend-fg29iqx7y-ud11.vercel.app',
+  uri: 'http://ec2-43-204-149-0.ap-south-1.compute.amazonaws.com',
 });
 
 const authLink = setContext((_, { headers }) => {
