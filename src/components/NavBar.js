@@ -2,7 +2,18 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { SIGNOUT_MUTATION } from "../graphql";
 import { useMutation } from "@apollo/client";
-import { FaBars, FaTimes, FaUser, FaInfo, FaSignInAlt, FaSignOutAlt, FaUserPlus, FaFire } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaUser,
+  FaInfo,
+  FaSignInAlt,
+  FaSignOutAlt,
+  FaUserPlus,
+  FaFire,
+  FaUserCircle, // Profile icon
+  FaChartBar, // Dashboard icon
+} from "react-icons/fa";
 import PaperBoatLogo from "./Logo";
 
 const Navbar = () => {
@@ -87,6 +98,20 @@ const Navbar = () => {
                     <FaFire className="w-6 h-6 mr-2" />
                     Trending
                   </div>
+                </div>
+                {/* Profile Option */}
+                <div className="pb-2 w-full flex items-center mt-2">
+                  <FaUserCircle className="w-6 h-6 mr-2" />
+                  <Link to="/profile" className="hover:underline">
+                    Profile
+                  </Link>
+                </div>
+                {/* Dashboard Option */}
+                <div className="pb-2 w-full flex items-center mt-2">
+                  <FaChartBar className="w-6 h-6 mr-2" />
+                  <Link to="/dashboard" className="hover:underline">
+                    Dashboard
+                  </Link>
                 </div>
               </div>
             </div>

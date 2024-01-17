@@ -1,4 +1,4 @@
-import gql from "graphql-tag"; // Import gql from graphql-tag
+import gql from "graphql-tag"; 
 
 export const REGISTER_MUTATION = gql`
   mutation signup_mutation(

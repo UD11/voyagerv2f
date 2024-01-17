@@ -14,13 +14,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TermsAndConditions from "./components/Terms";
 import PrivacyPolicy from "./components/Privacy";
+import ProfilePage from "./components/Profile";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        {/* <Route exact path="/addpage1" element={<AddPage />} /> */}
         <Route exact path="/search-results" element={<SearchResult />} />
         <Route exact path="/login" element={<LoginForm />} />
         <Route exact path="/signup" element={<SignupForm />} />
@@ -31,6 +31,7 @@ const App = () => {
         <Route path="/trending" element={<Trending />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
       <ToastContainer
         position="top-right"
